@@ -21,25 +21,45 @@ The following questions among others require urgent answers towards unravelling 
 
 ## Tasks, Skills and Concept demonstrated
 The following power BI features were incorporated;
-## Power query:
+## Power query: 
 In an attempt to present the data for proper visualization, the data sets was transformed after been load into power Bi and the following transformations process was carried out namely:
 - Headers Promotion: This was done in attempt to clean the data for proper alignment, the first role was assigned as the header.
-- Column Duplication: In an attempt to categorize Allergy column into bivariate data set, the column was duplicated and the duplicate was Split by Delimiter using Space and Leftmost as reference point. The Allergy response was then Rename taking the response as either “Yes i.e. Positive” or “No i.e. Negative” for easy visualizations. (See image below)
+- Column Duplication: In an attempt to categorize Allergy column into bivariate data set, the column was duplicated and the duplicate was Split by Delimiter using Space and Leftmost as reference point. The Allergy response was then Rename taking the response as either “Yes i.e. Positive” or “No i.e. Negative” for easy visualizations.
+ 
+![](query-mcdonald.jpg)
 
 ## Data Analysis Expression (DAX): 
 In an attempt to compare various nutrients value to acceptable standard, there is a need to write various DAX formula for selected nutrients. 
 Ifs statements were run for each of the selected columns. This was done according to acceptable standard set by reputable Association like America Heart Association (AHA), The Institute of Medicine (IOM). See references for validation
 The main objectives is to find out if these nutrients aligned with the International reference Table. The outcome is shown below
-(image)
+![](dax-gauge.jpg)
 
 Sodium gauge = IF(mcd[Sodium]> 500, "Unhealthy", "Healthy")
 added sugar guage = IF(mcd[added_sugar]> 30, "Unhealthy", "Healthy")
 Total Sugar gauge = IF(mcd[total_sugar]> 60, "Unhealthy", "Healthy")
 Saturated fat gauge = IF(mcd[sat_fat]> 13, "Unhealthy", "Healthy")
-(image)
 
 ## Visualizations:
 The analysis produces 5 visualizations as summarized in the image below:
 ![](main-mcdonald.jpg)
 You can Interract with the Report via this link below;
 https://app.powerbi.com/links/c6QvWgagUB?ctid=0c3b6bcc-15ab-408e-b9c1-11a02205649c&pbi_source=linkShare
+
+## Insights and Discussions
+- It was discovered that Sodium Nutrinets has the highest amount of Allergy Response as evidence in the analysis below.
+![](maccdonald(1)_page-0001.jpg)
+- The leading top-3 in terms of Nutrient Allergic response are as follows; Sodium, Energy and Carbohydrates
+![](Top-3-maccdonald(2)_page-0001.jpg)
+- The selected Nutrients were tested against Standard reference and found to exceed the Minimum acceptable standard range with Sodium having the highest "Unhealthy percentages" i.e (80.72%), added sugar, sugar total and saturated fat show appreciable Positive response i.e (Healthy percentages of about 71.94%, 88.02%, 67.33%) respectively.
+![](gauge-maccdonald(3)_page-0001.jpg)
+- The menu with the highest Allergic response is Chicken McNugget having the highest in Nutrients with highest allergic response i.e Sodium, Energy and Carbohydrates
+![](count-maccdonald(5)_page-0001.jpg)
+- The Menu with the lowest Allergic response is Our World Famous Fries
+- The Nutrients with the least Allergic response is "Trans-fat"
+![](maccdonald(2)_page-0001.jpg)
+
+## Recommendations
+- There is a need for holisitic review of the nutrients analysed above with great emphases on Sodium . An altrnatives to its Ingredients sources and usage can be sought to minimize its side effects.
+- There is a need to overhaul the selected Nutrients gauge above, i.e Sodium, Total sugar, Saturated fat and ensure compliance to the standard reference.
+- Above all, the masses need to be sensitize about the minimum Nutrients required per diet or menu as Size also affects the Nutrients with hihgest allergic response.
+- Finally, the Chef, Purchase fficers and Quality Control Officers need to be educated and sentisize on the side effects of various Food allergic response and the need to discharge the duties in accordance with acceptable Standard.
